@@ -1,0 +1,26 @@
+
+
+eureka:
+  client:
+    instance:
+      prefer-ip-address: true
+    serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8888
+spring:
+  application:
+      name: config-server
+  cloud:
+    config:
+      server:
+        default-application-name: config-server
+        git:
+          uri: https://github.com/samuelzuuka/springcloud-config-repo.git
+          basedir: test/config
+        prefix: /config
+#          search-paths: myconfigpath
+#          username:
+#          password:
+      label: master
