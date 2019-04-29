@@ -25,4 +25,5 @@ spring:
 
 
 zookeeper:
-  connection: localhost:2180,localhost:2181,localhost:2182
+#  connection: localhost:2180,localhost:2181,localhost:2182
+  connection: localhost:2180
